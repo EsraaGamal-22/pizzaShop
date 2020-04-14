@@ -1,0 +1,384 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-image:url("images/bg.png");
+	/*used to specify the kind of attachment of the background image with respect to its container.
+	It can be set to scroll or remain fixed. It can be applied to all HTML elements.*/
+    background-attachment:fixed;
+	/*property is used to specify the size of background images. The background image can be set to cover the element's entire
+	background area or have definite dimensions defined by the CSS author.*/
+	background-size:cover;
+}
+/* *symbol refer to select all elements */
+*{
+	/* box-sizing=border-box--> on an element, padding and border are included in the width and height(هيعرف الpadding&border حتي لو مش عرفتها علشان الكل يطلع شكل واحد )*/
+	box-sizing: border-box;
+}
+ul
+{
+	list-style-type: none;
+}
+a{
+	/* property specifies the decoration added to text, and is a shorthand property for*/
+	text-decoration:none;
+}
+.navigation-container
+{ width:100%;          /*Defines the width in percent of the containing block(100% full screen)*/
+height:60px;
+background-color:#ea272d;
+/* box-shadow:offset-x | offset-y | blur-radius | color */
+box-shadow:2px 2px 12px rgb(0,0,0,0.20);
+/*An element with position: fixed--> is positioned relative to the viewport, which means it always stays in the same place even if
+the page is scrolled. The top, right, bottom, and left properties are used to position the element.*/
+/*استخدمن السطرين دول علشان الشريط بتاع المنيو يثبت لما اجي اعمل تقليب في لصفحة*/
+position: fixed;
+top:0px;
+}
+.navigation-content
+{
+height:60px;
+display:flex;
+align-items:center;
+/* justify-content:space-between-->	Items are positioned with space between the lines*/
+justify-content:space-between;
+/* margin: top_margin right_margin bottom_margin left_margin (% -->specifies a margin in % of the width of the containing element) */
+margin:0 20%;      /* 20% from 100%width from containing element"navigation-container"*/
+/* margin_top&bottom=0px , margin_right&left=20% from width from containing element"navigation-container"*/
+}
+.cart img
+{
+	height:30px;
+}
+.menu ul{
+	display:flex;
+}
+.menu ul li a{
+/* padding_top padding_right padding_bottom padding_left */
+	padding:0 30px; /* padding_top&bottom=0px , padding_right&left=30px*/
+	font-family:calibri;
+	font-weight:bold;
+	color:#ffffff;
+	border-left:3px solid #e54c51;
+}
+.cart{
+	display:flex;
+	align-items:center;
+	font-family:calibri;
+	font-weight:bold;
+	}
+	.cart a{
+		color:#ffffff;
+		margin:0px 10px;/* margin_top&bottom=0px , margin_right&left=10px*/
+
+	}
+			.content{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+	}
+
+	.first-row
+	{
+		display:flex;
+	}
+	.whats-new img
+	{
+
+    /******* Center an image **********/
+    display: block;
+	/* margin_right&left=auto "tells the browser to automatically determine the left and right margins itself,
+	which it does by setting them equally. It guarantees that the left and right margins will be set to the same size." */
+	/* margin: top right bottom left*/
+	    margin:60px auto 20px ;
+	}
+	.new{
+		width:540px;
+		height:320px;
+		margin:10px;
+		background-image:url("images/new.png");
+		background-repeat:no-repeat;
+		background-size:cover;
+		padding:40px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+
+	}
+	.new p{
+		color:#ffffff;
+		line-height:50px; /* line-height-->property defines the space between two inline elements. */
+		margin:0px;
+		padding:0px;
+	}
+	/* nth-child(n) selector matches every element that is the nth child, regardless of type, of its parent.
+        n can be a number, a keyword, or a formula.*/
+	.new p:nth-child(1)/* select first p in the parent which named new */
+	{
+		font-size:40px;
+		font-family:calibri;
+		font-weight:bold;
+	}
+	.new p:nth-child(2)/* select second p in the parent which named new */
+	{
+		font-size:30px;
+		font-family:MyriadPro;
+
+	}
+	.new button
+	{
+		width:120px;
+		height:35px;
+		/*border-radius--> property defines the radius of the element's corners.
+		 border-radius:top-leftCorner top-rightCorner bottom-rightCorner bottom-leftCorner */
+		border-radius:10px;
+		background-color:#ea272d;
+		text-align:center;
+		font-family:calibri;
+		font-weight:normal;
+		color:#ffffff;
+		font-size:16px;
+		border:none;
+		box-shadow:2px 2px 12px rgb(0,0,0,0.2);
+		/*outline:none--->remove an outline on an object */
+		outline:none;
+		}
+		.tools
+		{
+			display:flex;
+			/*flex-direction--->The flexbox items are ordered the same way as the text direction,along the cross axis.*/
+			flex-direction:column;
+			/*justify-content:center---> Align the flex items at the center of the container"tools"*/
+			justify-content:center;
+			/*align-items:center--->Center the alignments for all the items of the flexible called tools */
+			align-items:center;
+
+		}
+		.search,.order
+		{
+			width:540px;
+			height:150px;
+			margin:10px;
+		background-color:#b1b1b1;}
+		.order
+		{
+			background-image:url("images/order.png");
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+		.search
+		{
+			background-image:url("images/find.png");
+			background-repeat:no-repeat;
+			background-size:cover;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:column;
+		}
+		.search p{
+			color:#ffffff;
+			font-family:calibri;
+			font-size:30px;
+			font-weight:bold;
+			/* line-height--> property in CSS controls the space between lines of text*/
+			line-height:0px;
+			/*text-shadow:offset-x | offset-y | blur-radius | color */
+			text-shadow:2px 2px 12px rgb(0,0,0,0.5);
+		}
+		.text{
+			background-color:#f1f1f1;
+			border-radius:20px;
+			width:250px;
+			height:35px;
+			display:flex;
+			/*justify-content:space-around-->Items are positioned with space before, between, and after the lines*/
+			justify-content:space-around;
+			align-items:center;
+			box-shadow:2px 2px 12px rgb(0,0,0,0.2);
+		}
+		.text input[type=search]
+		{
+			border:none;
+			/*background-color:transparent---> basically meaning that there is no background color*/
+			background-color:transparent;
+			color:#000000;
+			text-align:center;
+			outline:none;
+		}
+		.text button{
+			width:70px;
+			height:35px;
+			color:#0b0b0b0b;
+			border:none;
+			outline:none;
+			font-family:calibri;
+			font-weight:bold;
+			border-radius:0px 20px 20px 0px;
+			border-left:1px solid #CDCACA;
+		}
+		.order{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		.order a{
+			font-size:40px;
+			font-family:calibri;
+			font-weight:bold;
+			color:#ffffff;
+			text-shadow:2px 2px 12px rgb(0,0,0,0.1);
+		}
+		.second-row{
+			display:flex;
+		}
+		.food-1,.food-2,.food-3
+		{
+			width:354px;
+			height:350px;
+			margin:10px;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+			padding:30px 5%;
+			text-shadow:2px 2px 12px rgb(0,0,0,0.2);
+
+
+		}
+		.food-1 p,.food-2 p,.food-3 p{
+			margin:0px;
+			padding:0px;
+			color:#ffffff;
+			font-family:calibri;
+			line-height:40px;
+
+		}
+		.name p:nth-child(1)
+		{
+			font-weight:bold;
+			font-size:40px;
+		}
+		.name p:nth-child(2)
+		{
+			font-weight:normal;
+			font-size:30px;
+		}
+		.price button{
+			color:#ffffff;
+			border:none;
+			background-color:#ea272d;
+			outline:none;
+			width:70px;
+			height:35px;
+			border-radius:20px;
+			box-shadow:2px 2px 12px rgb(0,0,0,0.2)
+		}
+		/* :active--> selector is used to select and style the active link. ('put any element from html before it':active)*/
+		button:active{
+			/*transform:scale(1.2)--->Defines a 2D scale transformation, changing the elements width and height
+			You can use scale() with two values:
+           the first value is for the horizontal axis
+            the second value is for the vertical axis*/
+			transform:scale(1.2);
+			/*transition-->CSS transitions allows you to change property values smoothly, over a given duration.
+			transition:[transition-property] [transition-duration] [transition-timing-function] [transition-delay]; */
+			transition: all 0.5s ease;
+		}
+       .food-1{
+		   background-image:url("images/food-1.png");
+		   background-size:cover;
+		   background-repeat:no-repeat;
+	   }
+	    .food-2{
+		   background-image:url("images/food-2.png");
+		   background-size:cover;
+		   background-repeat:no-repeat;
+	   }
+	    .food-3{
+		   background-image:url("images/food-3.png");
+		   background-size:cover;
+		   background-repeat:no-repeat;
+	   }
+	   .third-row{
+		   display:flex;
+	   }
+	   .flavor,.breakfast
+	   {
+		   font-family:calibri;
+		   display:flex;
+		   flex-direction:column;
+		   justify-content:center;
+		   align-items:center;
+		   line-height:0px;
+		   width:540px;
+		   height:180px;
+		   margin:10px;
+		   background-color:#b1b1b1;
+	   }
+	   .flavor
+	   {
+		   background-image:url("images/flavor.png");
+		   background-size:cover;
+		   background-repeat:no-repeat;
+	   }
+	   .breakfast
+	   {
+		  background-image:url("images/breakfast.png");
+		   background-size:cover;
+		   background-repeat:no-repeat;
+	   }
+	.flavor p:nth-child(1),
+	.breakfast p:nth-child(1)
+	{
+		color:#ffffff;
+		font-weight:bold;
+		font-size:40px;
+	}
+	.flavor p:nth-child(2),
+	.breakfast p:nth-child(2)
+	{
+		color:rgb(255,255,255,255,0.8);
+	    font-size:20px;
+		text-align:center;
+	}
+	.flavor p,.breakfast p{
+		margin:0px;
+		padding:0px;
+		line-height:40px;
+	}
+	.footer{
+		background-color: #0a0a0a;
+		height:150px;
+	}
+	.social ul{
+		display:flex;
+	}
+	.social img{
+		height: 15px;
+	}
+	.social ul li a{
+		padding:15px;
+	}
+	.footer-menu ul li a{
+		border-left: 3px solid #2e2e2e;
+		color:rgb(255, 255, 255,0.8);
+	}
+	.navigation-content{
+		border-bottom: 2px solid #b1b1b1;
+	}
+	.copyright
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: calibri;
+		font-weight: normal;
+		font-size: 12px;
+		margin-top: 10px;
+	}
+	.copyright p{
+		color: #b9b9b9;
+	}
+	.new,.search,.order,.food-1,.food-2,.food-3,.flavor,.breakfast
+	{
+		border-radius: 10px;
+	}
